@@ -1,0 +1,113 @@
+<html>
+   <head>
+      <meta charset = "utf-8">
+	        <title>Your grade</title>
+			
+  <style>
+ 
+			div.div1{width:100%; height:650px;
+border:solid 1px;
+            background-image: url(img/homepage11.jpg);
+            background-repeat: no-repeat;
+			background-size:100% 650px;
+			position:relative;
+			}
+			h1{text-align:center;}
+div.welcome {
+    width: 500px;
+    height: 100px;
+    position: relative;
+	left:620px;
+	top:150px;
+	color:#ba7259;
+    -webkit-animation-name: welcome; 
+    -webkit-animation-duration: 3s; 
+    -webkit-animation-iteration-count: 1; 
+    animation-name: welcome;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+	
+@-webkit-keyframes welcome {
+    0%   {color:#fbeed6; top:0px;}
+   100% {color:#ba7259; top:150px;}
+}
+
+@keyframes welcome {
+    0%   {color:#fbeed6; top:0px;}
+    100% {color:#ba7259; top:150px;}
+}
+#second {font-weight: bold;
+position: relative;
+top:370px;left:40px;
+color:#fbeed6;
+font-size:22px;
+ }
+form {
+position: relative;
+top:412px;left:550px;}
+
+input[type = button]{
+border-radius: 55px;
+height:30px;
+width:150px;
+background-color:#ecceb5;
+color:#ba7259;
+}
+  </style>
+	  <script>
+	
+var seconds = 0;
+
+
+function updateTime()
+{
+   ++seconds;                
+   document.getElementById( "soFar" ).innerHTML = seconds;
+} 
+function lets_start(){
+//window.alert("hi");
+window.location= "Yourgrade1.html"
+
+
+}
+function start(){
+window.setInterval( "updateTime()", 1000 );
+ var button = document.getElementById("lets_start");
+    button.addEventListener("click", lets_start, false);
+	document.addEventListener( "mouseover", mOver, false );
+
+  
+	document.addEventListener( "mouseout", mOut, false );
+}
+
+function mOver(obj) {
+    
+	
+     
+	}
+
+
+
+window.addEventListener( "load", start, false );
+	  
+	  
+	  </script>
+</head>
+<body>
+
+<div class="div1">
+<div class="welcome">
+<h1 onmouseover="mOver(this)" onmouseout="mOut(this)">Welcome to Your Grade
+</br></br>Assignment 7 </h1>
+</div>
+<form action = "#">
+<input type="button" id="lets_start" value="Start Now" onclick="lets_start()">
+</form>
+<p id = "second">Seconds you have spent viewing this page so far: <span id = "soFar">0</span></p>
+</div>
+
+     
+</body>
+</html>
+
